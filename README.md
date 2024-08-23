@@ -1,5 +1,13 @@
 # SimpleImGuiFireGraph
 
+There are already fire graph implementations. But I think that they lose the extensibility and simplicity.
+
+[https://github.com/RudjiGames/rprof](https://github.com/RudjiGames/rprof) looks nice,. But it is complex.
+
+[https://github.com/bwrsandman/imgui-flame-graph](https://github.com/bwrsandman/imgui-flame-graph) is simple. But it only measure fix type of events.
+
+So I code a widget that use scope timer to measure time, and use simple draw function to draw fire graph, which is less than 100 lines.
+
 ## Build
 
 ```shell

@@ -1,0 +1,49 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+# *.obj # this overlap with a model format
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+.vs/
+bin/
+build/
+build-debug/
+build-release/
+.vscode/
+
+*.user
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.pdb
+*.sln
+
+# Log file
+.log

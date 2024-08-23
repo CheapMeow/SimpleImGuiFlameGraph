@@ -1,11 +1,11 @@
-#include "fire_graph_drawer.h"
+#include "flame_graph_drawer.h"
 
 #include "imgui_internal.h"
 
-void FireGraphDrawer::Draw(const std::vector<ScopeTimeData>& scope_times,
-                           int                               max_depth,
-                           std::chrono::microseconds         global_start,
-                           ImVec2                            graph_size)
+void FlameGraphDrawer::Draw(const std::vector<ScopeTimeData>& scope_times,
+                            int                               max_depth,
+                            std::chrono::microseconds         global_start,
+                            ImVec2                            graph_size)
 {
     if (scope_times.size() == 0)
         return;

@@ -26,15 +26,15 @@ file(GLOB EXTERNAL_SOURCE
     ${imgui_SOURCE_DIR}/backends/imgui_impl_sdl2.cpp
     ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
 )
-add_executable(SimpleImGuiFireGraphExample main.cpp ${EXTERNAL_SOURCE})
-target_include_directories(SimpleImGuiFireGraphExample
+add_executable(SimpleImGuiFlameGraphExample main.cpp ${EXTERNAL_SOURCE})
+target_include_directories(SimpleImGuiFlameGraphExample
     PRIVATE
         ${imgui_SOURCE_DIR}
         ${imgui_SOURCE_DIR}/backends
         ${imgui_SOURCE_DIR}/examples
         ${gl3w_BINARY_DIR}/include
 )
-target_link_libraries(SimpleImGuiFireGraphExample PRIVATE gl3w SDL2 SimpleImGuiFireGraph ${CMAKE_DL_LIBS})
-target_compile_definitions(SimpleImGuiFireGraphExample PRIVATE IMGUI_IMPL_OPENGL_LOADER_GL3W)
-target_compile_features(SimpleImGuiFireGraphExample PRIVATE cxx_constexpr)
-set_target_properties(SimpleImGuiFireGraphExample PROPERTIES CXX_STANDARD 17)
+target_link_libraries(SimpleImGuiFlameGraphExample PRIVATE gl3w SDL2 SimpleImGuiFlameGraph ${CMAKE_DL_LIBS})
+target_compile_definitions(SimpleImGuiFlameGraphExample PRIVATE IMGUI_IMPL_OPENGL_LOADER_GL3W)
+target_compile_features(SimpleImGuiFlameGraphExample PRIVATE cxx_constexpr)
+set_target_properties(SimpleImGuiFlameGraphExample PROPERTIES CXX_STANDARD 17)

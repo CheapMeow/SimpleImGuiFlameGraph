@@ -1,12 +1,12 @@
-# SimpleImGuiFireGraph
+# SimpleImGuiFlameGraph
 
-There are already fire graph implementations. But I think that they lose the extensibility and simplicity.
+There are already flame graph implementations. But I think that they lose the extensibility and simplicity.
 
 [https://github.com/RudjiGames/rprof](https://github.com/RudjiGames/rprof) looks nice,. But it is complex.
 
 [https://github.com/bwrsandman/imgui-flame-graph](https://github.com/bwrsandman/imgui-flame-graph) is simple. But it only measure fix type of events.
 
-So I code a widget that use scope timer to measure time, and use simple draw function to draw fire graph, which is less than 100 lines.
+So I code a widget that use scope timer to measure time, and use simple draw function to draw flame graph, which is less than 100 lines.
 
 ## Build
 
@@ -17,17 +17,17 @@ cmake --build build/
 
 ## Example
 
-Running the `SimpleImGuiFireGraphExample` example will display an example window showcasing the flame graph widget. The code is available for reference in `example/main.cpp`.
+Running the `SimpleImGuiFlameGraphExample` example will display an example window showcasing the flame graph widget. The code is available for reference in `example/main.cpp`.
 
 ```cpp
 TestFun();
-FireGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
+FlameGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
                         TimerSingleton::Get().GetMaxDepth(),
                         TimerSingleton::Get().GetGlobalStart());
 TimerSingleton::Get().Clear();
 ```
 
-![](./fire_graph.gif)
+![](./flame_graph.gif)
 
 ## Advantages
 
@@ -37,13 +37,13 @@ Example:
 
 ```cpp
 TestFun();
-FireGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
+FlameGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
                         TimerSingleton::Get().GetMaxDepth(),
                         TimerSingleton::Get().GetGlobalStart());
 TimerSingleton::Get().Clear();
 ```
 
-Implementation code of `FireGraphDrawer::Draw` is simple. Less than 100 lines.
+Implementation code of `FlameGraphDrawer::Draw` is simple. Less than 100 lines.
 
 2.Time measurement can be used in any scope, only one line of macro code is needed.
 
@@ -104,4 +104,4 @@ void TestFun()
 
 `Timer` class refers to [https://github.com/TheCherno/Hazel](https://github.com/TheCherno/Hazel)
 
-`FireGraphDrawer` class refers to [https://github.com/bwrsandman/imgui-flame-graph](https://github.com/bwrsandman/imgui-flame-graph)
+`FlameGraphDrawer` class refers to [https://github.com/bwrsandman/imgui-flame-graph](https://github.com/bwrsandman/imgui-flame-graph)

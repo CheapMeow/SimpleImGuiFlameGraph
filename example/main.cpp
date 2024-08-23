@@ -15,7 +15,7 @@
 #    include <SDL_opengl.h>
 #endif
 
-#include <fire_graph_drawer.h>
+#include <flame_graph_drawer.h>
 #include <random>
 #include <timer.h>
 
@@ -186,9 +186,9 @@ int main(int, char**)
         ImGui::NewFrame();
 
         TestFun();
-        FireGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
-                              TimerSingleton::Get().GetMaxDepth(),
-                              TimerSingleton::Get().GetGlobalStart());
+        FlameGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
+                               TimerSingleton::Get().GetMaxDepth(),
+                               TimerSingleton::Get().GetGlobalStart());
 
         // Rendering
         ImGui::Render();

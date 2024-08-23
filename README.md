@@ -16,6 +16,7 @@ TestFun();
 FireGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
                         TimerSingleton::Get().GetMaxDepth(),
                         TimerSingleton::Get().GetGlobalStart());
+TimerSingleton::Get().Clear();
 ```
 
 ![](./fire_graph.gif)
@@ -31,6 +32,7 @@ TestFun();
 FireGraphDrawer::Draw(TimerSingleton::Get().GetScopeTimes(),
                         TimerSingleton::Get().GetMaxDepth(),
                         TimerSingleton::Get().GetGlobalStart());
+TimerSingleton::Get().Clear();
 ```
 
 Implementation code of `FireGraphDrawer::Draw` is simple. Less than 100 lines.

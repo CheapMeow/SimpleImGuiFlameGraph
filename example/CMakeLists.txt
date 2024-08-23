@@ -37,3 +37,4 @@ target_include_directories(SimpleImGuiFireGraphExample
 target_link_libraries(SimpleImGuiFireGraphExample PRIVATE gl3w SDL2 SimpleImGuiFireGraph ${CMAKE_DL_LIBS})
 target_compile_definitions(SimpleImGuiFireGraphExample PRIVATE IMGUI_IMPL_OPENGL_LOADER_GL3W)
 target_compile_features(SimpleImGuiFireGraphExample PRIVATE cxx_constexpr)
+set_target_properties(SimpleImGuiFireGraphExample PROPERTIES CXX_STANDARD 17)

@@ -159,8 +159,7 @@ int main(int, char**)
     ImVec4 clear_color          = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
-    bool done       = false;
-    bool firstFrame = true;
+    bool done = false;
     while (!done)
     {
         // Poll and handle events (inputs, window resize, etc.)
@@ -199,8 +198,6 @@ int main(int, char**)
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         SDL_GL_SwapWindow(window);
-
-        firstFrame = false;
 
         TimerSingleton::Get().Clear();
     }

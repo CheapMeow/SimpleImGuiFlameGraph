@@ -16,6 +16,8 @@ target_sources(${PROJECT_NAME} INTERFACE
 target_include_directories(${PROJECT_NAME} INTERFACE $<BUILD_INTERFACE:${IMGUI_FLAME_GRAPH_DIRECTORIES}>)
 target_compile_definitions(${PROJECT_NAME} INTERFACE IMGUI_DEFINE_MATH_OPERATORS)
 
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
+
 if(IMGUI_FLAME_GRAPH_BUILD_EXAMPLE)
     add_subdirectory(example/)
 endif()
